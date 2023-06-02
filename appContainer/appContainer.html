@@ -1,0 +1,10 @@
+<template>
+    <template if:true={currentPage}>
+        <template if:false={showDirections}>
+            <c-home onnavigate={handleNavigation}></c-home>
+        </template>
+        <template if:true={showDirections}>
+            <c-directions-form></c-directions-form>
+        </template>
+    </template>
+</template>

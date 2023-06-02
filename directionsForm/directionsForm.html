@@ -1,0 +1,13 @@
+<template>
+    <lightning-input label="Origin Address" value={originAddress} onchange={handleOriginChange}></lightning-input>
+    <lightning-input label="Destination Address" value={destinationAddress} onchange={handleDestinationChange}></lightning-input>
+    <lightning-button label="Get Directions" onclick={getDirections}></lightning-button>
+    <template if:true={directionsResult}>
+        <p>Distance: {directionsResult.distance}</p>
+        <p>Travel Time: {directionsResult.travelTime}</p>
+        <p>Cost of Travel: {directionsResult.costOfTravel}</p>
+    </template>
+    <template if:true={errorMessage}>
+        <p>{errorMessage}</p>
+    </template>
+</template>
